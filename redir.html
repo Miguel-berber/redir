@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirección basada en User-Agent</title>
+<script>
+    window.onload = function() {
+        // Obtenemos el user-agent del navegador
+        var userAgent = navigator.userAgent.toLowerCase();
+
+        // Comprobamos si el user-agent contiene ciertos patrones para identificar el navegador
+        if (userAgent.includes('iphone')) {
+            // Si el user-agent contiene "iphone", redirigir a App Store
+            window.location.href = 'https://s.yapp.net/appst';
+        } else if (userAgent.includes('android')) {
+            // Si el user-agent contiene "android", redirigir a Playsore
+            window.location.href = 'https://s.yapp.net/playst';
+        } else {
+            // Si no se detecta ninguno de los casos anteriores, redirigir a Benavides conmigo
+            window.location.href = 'https://s.yapp.net/bena';
+        }
+    }
+</script>
+</head>
+<body>
+    <!-- Mensaje que se mostrará mientras se realiza la redirección -->
+    <p>Redirigiendo...</p>
+</body>
+</html>
